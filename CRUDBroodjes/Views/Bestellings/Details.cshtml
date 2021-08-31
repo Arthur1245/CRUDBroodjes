@@ -1,0 +1,30 @@
+﻿@model CRUDBroodjes.Models.Bestelling
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Bestelling</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Persoon)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Persoon.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Broodje)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Broodje.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
